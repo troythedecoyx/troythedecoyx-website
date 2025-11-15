@@ -2176,7 +2176,7 @@ section {
 
 /* Projects Section */
 .projects {
-    background: var(--bg-dark);
+    background: var(--bg-darker);
     position: relative;
     overflow: hidden;
 }
@@ -2326,7 +2326,7 @@ section {
 
 /* Contact Section */
 .contact {
-    background: var(--bg-darker);
+    background: var(--bg-dark);
     position: relative;
     overflow: hidden;
 }
