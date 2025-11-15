@@ -1,0 +1,12 @@
+# robots.txt for troythedecoyx.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://troythedecoyx.com/sitemap.xml
+
+# Disallow admin or private areas if you add them later
+# Disallow: /admin/
+# Disallow: /private/
+
