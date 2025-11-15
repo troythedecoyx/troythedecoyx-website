@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # robots.txt for troythedecoyx.com
 
 User-agent: *
@@ -11,17 +10,3 @@ Sitemap: https://troythedecoyx.com/sitemap.xml
 # Disallow: /admin/
 # Disallow: /private/
 
-=======
-# robots.txt for troythedecoyx.com
-
-User-agent: *
-Allow: /
-
-# Sitemap location
-Sitemap: https://troythedecoyx.com/sitemap.xml
-
-# Disallow admin or private areas if you add them later
-# Disallow: /admin/
-# Disallow: /private/
-
->>>>>>> 17d0a8c8857f9398271cf3f28c951d4f12ecedb2
