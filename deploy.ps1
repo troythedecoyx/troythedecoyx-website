@@ -25,7 +25,7 @@ if ($exitCode -ne 0) {
 
 # Push to GitHub
 Write-Host "📤 Pushing to GitHub..." -ForegroundColor Cyan
-git push origin master
+git push origin main
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "✅ Successfully pushed to GitHub!" -ForegroundColor Green
