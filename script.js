@@ -397,8 +397,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Initialize and update NYE countdown
-    updateNYECountdown();
-    setInterval(updateNYECountdown, 1000);
+    // Check if countdown elements exist
+    const countdownElements = {
+        days: document.getElementById('days'),
+        hours: document.getElementById('hours'),
+        minutes: document.getElementById('minutes'),
+        seconds: document.getElementById('seconds')
+    };
+    
+    if (countdownElements.days && countdownElements.hours && countdownElements.minutes && countdownElements.seconds) {
+        updateNYECountdown();
+        setInterval(updateNYECountdown, 1000);
+    } else {
+        console.warn('Countdown elements not found. Elements:', countdownElements);
+    }
     
     // Adjust menu for footer on scroll
     window.addEventListener('scroll', adjustMenuForFooter);
