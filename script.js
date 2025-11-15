@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Floating Menu Toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const floatingMenu = document.querySelector('.floating-menu');
@@ -246,14 +245,17 @@ function updateNYECountdown() {
     // CST is UTC-6, so 6 PM CST = 18:00 CST = 18:00 + 6 = 24:00 UTC = 00:00 UTC next day
     // So December 31st at 6 PM CST = January 1st at 00:00 UTC
     
-    // Create this year's December 31st at 6 PM CST
-    // Using UTC: Dec 31 18:00 CST = Dec 31 24:00 UTC = Jan 1 00:00 UTC
-    // Note: hour 24 rolls over to next day, so we use Jan 1 00:00 UTC
-    let nye = new Date(Date.UTC(currentYear, 0, 1, 0, 0, 0)); // Jan 1 00:00 UTC = Dec 31 6 PM CST
+    // Target December 31st at 6:00 PM CST
+    // Dec 31 18:00 CST = Dec 31 24:00 UTC = Jan 1 00:00 UTC (next year)
+    // So Dec 31, YYYY 6 PM CST = Jan 1, YYYY+1 00:00 UTC
+    let targetYear = currentYear;
+    // Create target as Jan 1 of next year at 00:00 UTC (which is Dec 31 of current year at 6 PM CST)
+    let nye = new Date(Date.UTC(targetYear + 1, 0, 1, 0, 0, 0)); // Jan 1, YYYY+1 00:00 UTC = Dec 31, YYYY 6 PM CST
     
     // If this year's NYE has passed, target next year
     if(now >= nye) {
-        nye = new Date(Date.UTC(currentYear + 1, 0, 1, 0, 0, 0)); // Next year's Jan 1 00:00 UTC = Dec 31 6 PM CST
+        targetYear = currentYear + 1;
+        nye = new Date(Date.UTC(targetYear + 1, 0, 1, 0, 0, 0)); // Next year's Dec 31 6 PM CST
     }
     
     const diff = nye - now;
