@@ -1141,7 +1141,7 @@ section {
 }
 
 .about-right {
-    padding: 0;
+    padding: 0 0 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1815,7 +1815,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4rem;
+    padding: 0;
     flex-wrap: wrap;
     gap: 2rem;
     position: relative;
@@ -2745,9 +2745,12 @@ section {
         gap: 2rem;
     }
     
-    .about-left,
-    .about-right {
+    .about-left {
         padding: 0;
+    }
+    
+    .about-right {
+        padding: 0 0 0 1rem;
     }
     
     .hero-stat {
