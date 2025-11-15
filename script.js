@@ -248,11 +248,12 @@ function updateNYECountdown() {
     
     // Create this year's December 31st at 6 PM CST
     // Using UTC: Dec 31 18:00 CST = Dec 31 24:00 UTC = Jan 1 00:00 UTC
-    let nye = new Date(Date.UTC(currentYear, 11, 31, 24, 0, 0)); // Jan 1 00:00 UTC = Dec 31 6 PM CST
+    // Note: hour 24 rolls over to next day, so we use Jan 1 00:00 UTC
+    let nye = new Date(Date.UTC(currentYear, 0, 1, 0, 0, 0)); // Jan 1 00:00 UTC = Dec 31 6 PM CST
     
     // If this year's NYE has passed, target next year
     if(now >= nye) {
-        nye = new Date(Date.UTC(currentYear + 1, 11, 31, 24, 0, 0)); // Next year's Dec 31 6 PM CST
+        nye = new Date(Date.UTC(currentYear + 1, 0, 1, 0, 0, 0)); // Next year's Jan 1 00:00 UTC = Dec 31 6 PM CST
     }
     
     const diff = nye - now;
